@@ -1,0 +1,8 @@
+{
+  "Sender": {
+    "Server": "mail.robertmonden.com",
+    "ServerPort": "465",
+    "EmailAddress": "",
+    "Password": ""
+  }
+}

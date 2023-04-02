@@ -1,0 +1,70 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=camunda
+      - POSTGRES_PASSWORD=camunda
+
+  camunda:
+    image: camunda/camunda-bpm-platform:${DISTRO:-latest}
+    environment:
+      - DB_DRIVER=org.postgresql.Driver
+      - DB_URL=jdbc:postgresql://postgres:5432/camunda
+      - DB_USERNAME=camunda
+      - DB_PASSWORD=camunda
+      - WAIT_FOR=postgres:5432
+    links:
+      - postgres
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  process-payment-service:
+    image: payment-service
+    depends_on:
+      - camunda
+    build:
+      context: ./Applications/PaymentService
+      dockerfile: Dockerfile
+    ports:
+      - "9020:80"
+    environment:
+      - ServiceType=ProcessPaymentService
+      - TaskClientBaseAddress=http://camunda:8080/engine-rest
+      - Topics=ps-process-payment
+      - Variables=CC_NUMBER,CC_HOLDER,CC_CVC
+
+  process-application-service:
+    image: us-cbp
+    depends_on:
+      - camunda
+    build:
+      context: ./Applications/Us.Cbp
+      dockerfile: Dockerfile
+    ports:
+      - "9021:80"
+    environment:
+      - ServiceType=ProcessApplicationService
+      - TaskClientBaseAddress=http://camunda:8080/engine-rest
+      - Topics=ps-process-application
+      - Variables=
+
+  mail-service:
+    image: us-cbp
+    depends_on:
+      - camunda
+    build:
+      context: ./Applications/Us.Cbp
+      dockerfile: Dockerfile
+    ports:
+      - "9022:80"
+    environment:
+      - ServiceType=MailService
+      - TaskClientBaseAddress=http://camunda:8080/engine-rest
+      - Topics=ps-mail
+      - Variables=MAIL_RECIPIENT,MAIL_SUBJECT,MAIL_BODY
+
+volumes:
+  camunda-data: {}

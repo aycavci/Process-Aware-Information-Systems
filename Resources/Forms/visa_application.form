@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Completed",
+          "value": "true"
+        }
+      ],
+      "label": "Is the application completed?",
+      "type": "select",
+      "id": "Field_17t3lra",
+      "key": "app_completed",
+      "defaultValue": "true",
+      "validate": {
+        "required": true
+      },
+      "description": "Go with the default option"
+    }
+  ],
+  "type": "default",
+  "id": "visa_application",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.6.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 5
+}

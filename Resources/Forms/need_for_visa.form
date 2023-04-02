@@ -1,0 +1,34 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "true"
+        },
+        {
+          "label": "No",
+          "value": "false"
+        }
+      ],
+      "label": "Are you planning to stay more than 90 days?",
+      "type": "select",
+      "id": "Field_109nl5a",
+      "key": "more_than_90",
+      "description": "Select one of the options",
+      "validate": {
+        "required": true
+      },
+      "properties": {}
+    }
+  ],
+  "type": "default",
+  "id": "need_for_visa",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.6.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 5
+}

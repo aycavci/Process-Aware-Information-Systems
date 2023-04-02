@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "value": "true",
+          "label": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "false"
+        }
+      ],
+      "label": "Based on your nationality, are you eligible for the Visa Waiver Program (VWP)?",
+      "type": "select",
+      "id": "Field_0q4xes4",
+      "key": "qualify_for_vwp",
+      "description": "Select one of the options",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "schemaVersion": 5,
+  "type": "default",
+  "id": "is_eligible_for_vwp",
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.6.0"
+  }
+}

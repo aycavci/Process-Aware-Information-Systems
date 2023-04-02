@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "label": "Credit Card Number",
+      "type": "textfield",
+      "id": "Field_019tdrt",
+      "key": "field_cc_number",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Credit Card Holder",
+      "type": "textfield",
+      "id": "Field_071qqzi",
+      "key": "field_cc_holder",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Security Code",
+      "type": "number",
+      "id": "Field_1dt2k5t",
+      "key": "field_cc_cvc",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "payment_information_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 5
+}

@@ -1,0 +1,137 @@
+{
+  "components": [
+    {
+      "label": "Name & Surname",
+      "type": "textfield",
+      "id": "Field_1dc1f24",
+      "key": "name_surname",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Birthday",
+      "type": "textfield",
+      "id": "Field_0p73dfl",
+      "key": "birthday",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Country of birth",
+      "type": "textfield",
+      "id": "Field_11wn8ar",
+      "key": "birth_place",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Passport nationality",
+      "type": "textfield",
+      "id": "Field_0fjkslp",
+      "key": "nationality",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Passport number",
+      "type": "textfield",
+      "id": "Field_12xgjie",
+      "key": "passport_number",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Address that you reside currently",
+      "type": "textfield",
+      "id": "Field_1d61ib7",
+      "key": "address",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Telephone",
+      "type": "textfield",
+      "id": "Field_09a49wz",
+      "key": "telephone",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Email address",
+      "type": "textfield",
+      "id": "Field_1f815gh",
+      "key": "email",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Reason for the visit",
+      "type": "textfield",
+      "id": "Field_1ezoajv",
+      "key": "reason",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "true"
+        },
+        {
+          "label": "No",
+          "value": "false"
+        }
+      ],
+      "label": "Do you have any criminal record?",
+      "type": "select",
+      "id": "Field_0a3sik7",
+      "key": "criminal_record",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Do you currently possesss any other nationality?",
+      "type": "checkbox",
+      "id": "Field_1b2sbqm",
+      "key": "other_nationality"
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "true"
+        }
+      ],
+      "label": "Do you confirm that all the information above is filled correctly?",
+      "type": "select",
+      "id": "Field_1l7prkn",
+      "key": "filled",
+      "validate": {
+        "required": true
+      },
+      "description": "Select one of the options",
+      "defaultValue": "<none>",
+      "disabled": false
+    }
+  ],
+  "type": "default",
+  "id": "esta_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.6.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 5
+}
